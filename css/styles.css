@@ -37,6 +37,18 @@ img {
     max-width: 100%;
     height: auto;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .container {
     max-width: 1158px;
     padding-left: 15px;
@@ -515,6 +527,12 @@ border: 1px solid rgba(0, 0, 0, 0.1);
 border-radius: 50%;
 margin-left: auto;
 margin-bottom: 24px;
+transition: background-color var(--transition), border var(--transition), fill var(--transition);
+}
+.modal-close:is(:hover, :focus) {
+    background-color: var(--button-hover);
+    border: transparent;
+    fill: var(--white);
 }
 .close-icon {
     width: 8px;
@@ -594,9 +612,43 @@ resize: none;
 outline: transparent;
 transition: border-color var(--transition);
 padding: 8px 16px;
+margin-bottom: 16px;
 }
 .modal-textarea:focus {
 border-color: var(--brand-color);
+}
+.modal-agreement {
+    margin-bottom: 24px;
+}
+.agreement-label {
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.04em;
+color: var(--light-slate);
+display: flex;
+gap: 8px;
+align-items: center;
+}
+.agreement-label span {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--navy-blue);
+border-radius: 2px;
+display: flex;
+align-items: center;
+justify-content: center;
+fill: transparent;
+transition: background-color var(--transition), border var(--transition), fill var(--transition);
+}
+.agreement-checkbox:checked + .agreement-label span {
+background-color: var(--button-hover);
+border: transparent;
+fill: var(--white);
+}
+
+.user-agreement-link {
+color: var(--brand-color);
+margin-left: -4px;
 }
 .modal-submit {
     display: block;

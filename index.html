@@ -360,7 +360,7 @@
               class="footer-input-email"
               placeholder="E-mail">
             </form>
-              <button type="submit" class="footer-submit-button"><p>Subscribe<p><svg class="plane-icon">
+              <button type="submit" class="footer-submit-button">Subscribe<svg class="plane-icon">
               <use href="./images/sprite.svg#icon-plane"></use>
               </svg>
               </button>
@@ -369,7 +369,9 @@
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal"><button type="button" class="modal-close" data-modal-close><svg class="close-icon"><use href="./images/sprite.svg#icon-close"></use></svg></button>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close><svg class="close-icon"><use href="./images/sprite.svg#icon-close"></use></svg>
+        </button>
       <p class="modal-head">Leave your contacts and we will call you back</p>
       <form>
         <div class="modal-field">
@@ -414,6 +416,22 @@
         <div class="modal-field">
           <label for="user-comment" class="modal-input-label">Comment</label>
           <textarea name="user-comment" id="user-comment" class="modal-textarea" placeholder="Text input"></textarea>
+        </div>
+        <div class="modal-agreement">
+          <input 
+          type="checkbox"
+          name="user-agreement"
+          id="user-agreement"
+          class="agreement-checkbox visually-hidden"
+          value="true"
+          >
+            <label for="user-agreement" class="agreement-label">
+              <span>
+                <svg width="10" height="8">
+                <use href="./images/sprite.svg#icon-check"></use>
+              </svg>
+              </span> I accept the terms and conditions of the<a href="" class="user-agreement-link">Privacy Policy</a>
+            </label>
         </div>
         <button type="submit" class="modal-submit">Send</button>
       </form>
