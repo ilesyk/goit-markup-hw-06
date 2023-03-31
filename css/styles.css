@@ -123,6 +123,7 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 text-decoration: none;
 color: var(--navy-blue);
+transition: color var(--transition);
 }
 .link {
     text-decoration: none;
